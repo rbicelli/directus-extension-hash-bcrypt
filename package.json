@@ -1,0 +1,33 @@
+{
+        "name": "hash-bcrypt",
+        "description": "Provide a hook to create an hash field using bcrypt alongside the standard argon2 hash",
+        "icon": "extension",
+        "version": "1.0.0",
+        "keywords": [
+                "directus",
+                "directus-extension",
+                "directus-extension-hook"
+        ],
+        "type": "module",
+        "files": [
+                "dist"
+        ],
+        "directus:extension": {
+                "type": "hook",
+                "path": "dist/index.js",
+                "source": "src/index.js",
+                "host": "^10.10.0"
+        },
+        "scripts": {
+                "build": "directus-extension build",
+                "dev": "directus-extension build -w --no-minify",
+                "link": "directus-extension link",
+                "validate": "directus-extension validate"
+        },
+        "devDependencies": {
+                "@directus/extensions-sdk": "14.0.0"
+        },
+        "dependencies": {
+                "bcrypt": "^5.1.1"
+        }
+}
